@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { navLinks } from '@/config';
+import { NavLinks } from '@/config';
 import { Navbar } from './Navbar';
 
 const meta: Meta<typeof Navbar> = {
@@ -17,5 +17,5 @@ export default meta;
 type Story = StoryObj<typeof Navbar>;
 
 export const Default: Story = {
-	render: () => <Navbar data={navLinks} />,
+	render: () => <Navbar data={NavLinks()} />,
 };

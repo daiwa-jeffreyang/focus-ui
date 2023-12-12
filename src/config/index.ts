@@ -1,27 +1,24 @@
 import {
-	BuildingOfficeIcon,
-	CalendarIcon,
-	ChartPieIcon,
-	CheckBadgeIcon,
-	CurrencyDollarIcon,
-	DocumentChartBarIcon,
-	FolderIcon,
-	UserGroupIcon,
-	UserIcon,
-} from '@heroicons/react/24/outline';
-import { IconComponents, IconDashboard, IconLock, IconMoodSmile } from '@tabler/icons-react';
+	IconBadge,
+	IconBuilding,
+	IconChartAreaLineFilled,
+	IconComponents,
+	IconDashboard,
+	IconReportMoney,
+	IconUsersGroup,
+} from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
-import { NavItem } from '@/types/nav-item';
 import { get } from 'http';
+import { NavItem } from '@/types/nav-item';
 
 const navigationLinks: NavItem[] = [
-	{ label: 'Dashboard', icon: CurrencyDollarIcon, link: '/dashboard' },
+	{ label: 'Dashboard', icon: IconDashboard, link: '/dashboard' },
 
 	{
 		label: 'Finance',
-		icon: CurrencyDollarIcon,
+		icon: IconReportMoney,
 		// icon: IconComponents,
-		initiallyOpened: true,
+		initiallyOpened: false,
 		// link: '/dashboard/table',
 		links: [
 			{
@@ -29,48 +26,66 @@ const navigationLinks: NavItem[] = [
 				link: '/dashboard/table',
 			},
 			{
-				label: 'Forms',
+				label: 'Accounting',
 				link: '/dashboard/form',
 			},
 		],
 	},
 	{
-		label: 'Finance2',
-		icon: IconMoodSmile,
-		initiallyOpened: true,
-		link: '/dashboard/table',
-	},
-	{
 		label: 'Corporate',
-		icon: BuildingOfficeIcon,
-		initiallyOpened: true,
+		icon: IconBuilding,
+		initiallyOpened: false,
 		// link: '/dashboard/chart',
 		links: [
 			{
-				label: 'Reports',
+				label: 'Clients',
 				link: '/dashboard/chart',
 			},
 			{
-				label: 'Forms',
+				label: 'Sales',
+				link: '/dashboard/form',
+			},
+			{
+				label: 'Positions',
 				link: '/dashboard/form',
 			},
 		],
 	},
 	{
 		label: 'Compliance',
-		icon: CheckBadgeIcon,
-		initiallyOpened: true,
-		link: '/dashboard/settings',
+		icon: IconBadge,
+		initiallyOpened: false,
+		// link: '/dashboard/settings',
+		links: [
+			{
+				label: 'Documents',
+				link: '/dashboard/chart',
+			},
+			{
+				label: 'SEC',
+				link: '/dashboard/form',
+			},
+		],
 	},
 	{
 		label: 'Equities',
-		icon: ChartPieIcon,
+		icon: IconChartAreaLineFilled,
 		initiallyOpened: false,
+		// link: '/dashboard/chart',
+		links: [
+			{
+				label: 'Trades',
 		link: '/dashboard/chart',
 	},
 	{
+				label: 'Security Master',
+				link: '/dashboard/form',
+			},
+		],
+	},
+	{
 		label: 'Human Resources',
-		icon: UserIcon,
+		icon: IconUsersGroup,
 		initiallyOpened: true,
 		link: '/dashboard/form',
 	},
@@ -87,7 +102,6 @@ export interface Department {
 	updateUser: string;
 }
 
-
 async function getAllDepartments(): Promise<Department[]> {
 	const res = await fetch('https://docapi-docapi-data.azuremicroservices.io/doc/departments/all');
 
@@ -98,9 +112,6 @@ async function getAllDepartments(): Promise<Department[]> {
 
 	return res.json();
 }
-
-
-
 
 // function getIntersection(navItems: NavItem[] = [], departments: Department[] = []): NavItem[] {
 function getIntersection(navItems: NavItem[], departments: Department[] ): NavItem[] {
