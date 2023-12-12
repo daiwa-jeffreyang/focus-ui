@@ -20,7 +20,7 @@
 		"partytown": "partytown copylib public/~partytown",
 		"lint": "next lint",
 		"lint:fix": "eslint src --fix && pnpm run format",
-		"test": "jest",
+		"test": "jest  --passWithNoTests",
 		"test:watch": "jest --watch",
 		"type-check": "tsc --noEmit",
 		"format": "prettier --write src",
