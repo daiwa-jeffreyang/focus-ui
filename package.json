@@ -5,7 +5,7 @@
 	"description": "A Modern Admin Dashboard made with Mantine/React/NextJS!",
 	"lint-staged": {
 		"src/**/*.+(js|jsx|ts|tsx|json|md)": [
-			"pnpm run lint:fix"
+			"npm run lint:fix"
 		]
 	},
 	"husky": {
@@ -19,27 +19,26 @@
 		"build": "npm run partytown && next build",
 		"partytown": "partytown copylib public/~partytown",
 		"lint": "next lint",
-		"lint:fix": "eslint src --fix && pnpm run format",
+		"lint:fix": "eslint src --fix && npm run format",
 		"test": "jest  --passWithNoTests",
 		"test:watch": "jest --watch",
 		"type-check": "tsc --noEmit",
 		"format": "prettier --write src",
-		"up": "pnpm up --interactive",
-		"up-latest": "pnpm up --latest",
+		"up": "npm up --interactive",
+		"up-latest": "npm up --latest",
 		"release": "standard-version",
-		"release-as-major": "pnpm run release --release-as major",
-		"release-as-minor": "pnpm run release --release-as minor",
-		"release-as-patch": "pnpm run release --release-as patch",
+		"release-as-major": "npm run release --release-as major",
+		"release-as-minor": "npm run release --release-as minor",
+		"release-as-patch": "npm run release --release-as patch",
 		"push-release": "git push --follow-tags origin main",
 		"pull": "git rebase origin main -i",
-		"pre-commit": "pnpm run lint",
+		"pre-commit": "npm run lint",
 		"prepare": "husky install",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},
 	"dependencies": {
 		"@builder.io/partytown": "0.8.1",
-		"@heroicons/react": "^2.0.18",
 		"@hookform/resolvers": "3.3.2",
 		"@mantine/core": "^7.2.2",
 		"@mantine/dates": "^7.2.2",
@@ -52,11 +51,12 @@
 		"@tanstack/react-query": "5.8.4",
 		"@tanstack/react-table": "^8.10.7",
 		"@vercel/analytics": "^1.1.1",
+		"@vercel/og": "^0.6.1",
 		"chart.js": "^4.4.0",
 		"dayjs": "^1.11.10",
 		"ky": "^1.1.3",
 		"mantine-react-table": "2.0.0-alpha.5",
-		"next": "14.0.2",
+		"next": "^13.5.6",
 		"react": "18.2.0",
 		"react-chartjs-2": "^5.2.0",
 		"react-dom": "18.2.0",
