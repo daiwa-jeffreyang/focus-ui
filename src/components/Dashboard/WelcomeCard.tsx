@@ -2,13 +2,14 @@
 
 import { Card, List, Space, Text, ThemeIcon, Title } from '@mantine/core';
 import { IconCircleCheck } from '@tabler/icons-react';
+import Link from 'next/link'
 
 export function WelcomeCard() {
 	return (
 		<Card radius="md">
-			<Title order={5}>Welcome back!</Title>
+			<Title order={5}>Notifications</Title>
 			<Text fz="sm" c="dimmed" fw="500">
-				Mantine Crypto Dashboard
+				Corporate Actions
 			</Text>
 			<Space h="sm" />
 			<List
@@ -21,9 +22,10 @@ export function WelcomeCard() {
 					</ThemeIcon>
 				}
 			>
-				<List.Item>If several languages coalesce</List.Item>
-				<List.Item>Sed ut perspiciatis unde</List.Item>
-				<List.Item>It would be necessary</List.Item>
+				<List.Item>Reverse Splits: <Link href=''>Microsoft (MSFT), Exxon (XOM)</Link></List.Item>
+				<List.Item>Mergers: <Link href=''>Cigna (CI) merges with Humana (HUM)</Link></List.Item>
+				<List.Item>Share Buybacks: <Link href=''>Chevron (CVX)</Link> </List.Item>
+				<List.Item>Tender Offers: <Link href=''>SpaceX at $97/share</Link></List.Item>
 			</List>
 		</Card>
 	);

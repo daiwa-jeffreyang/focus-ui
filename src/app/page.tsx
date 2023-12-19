@@ -12,24 +12,24 @@ export default function Page() {
 				links={[
 					{
 						link: '/about',
-						label: 'Home',
+						label: 'DAB',
 					},
 					{
 						link: '/learn',
-						label: 'Features',
+						label: 'Portal',
 					},
 					{
 						link: '/pricing',
-						label: 'Pricing',
+						label: 'SharePoint',
 					},
 				]}
 			/>
 			<HeroSection />
-			<FeaturesSection
+			{/* <FeaturesSection
 				title="Features"
 				description="This project is an experiment to see how a modern admin application, with features like auth, API routes, and static pages would work in Next.js 13 app dir."
 			/>
-			<EmailSection />
+			<EmailSection /> */}
 			<Footer />
 		</LandingContainer>
 	);

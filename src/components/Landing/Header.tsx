@@ -54,7 +54,7 @@ export function Header({ links }: HeaderActionProps) {
 					{items}
 				</Group>
 				<Button radius="xl" h={30}>
-					Try it now
+					December 14, 2023
 				</Button>
 
 				<Drawer opened={opened} onClose={toggle} size="md" padding="xl">

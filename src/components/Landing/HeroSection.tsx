@@ -3,6 +3,7 @@
 import { Button, Container, Group, Text, Title } from '@mantine/core';
 import { IconArrowRight, IconStar } from '@tabler/icons-react';
 import { useRouter } from 'next/navigation';
+import { SimpleForm } from '@/components/Form/SimpleForm';
 import classes from './HeroSection.module.css';
 
 export function HeroSection() {
@@ -17,11 +18,12 @@ export function HeroSection() {
 				</Title>
 
 				<Text className={classes.description} mt={30}>
-					Dashboard web applications for Daiwa Capital Markets Americas
+					Web applications for Daiwa Capital Markets Americas
 				</Text>
 
 				<Group mt={40}>
-					<Button
+				<SimpleForm/>
+					{/* <Button
 						size="lg"
 						className={classes.control}
 						onClick={() => {
@@ -29,9 +31,9 @@ export function HeroSection() {
 						}}
 						rightSection={<IconArrowRight />}
 					>
-						Get started
-					</Button>
-					<Button
+						LOGIN
+					</Button> */}
+					{/* <Button
 						variant="outline"
 						size="lg"
 						className={classes.control}
@@ -42,7 +44,7 @@ export function HeroSection() {
 						rightSection={<IconStar />}
 					>
 						Give a Star
-					</Button>
+					</Button> */}
 				</Group>
 			</div>
 		</Container>

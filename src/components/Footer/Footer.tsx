@@ -9,14 +9,14 @@ export function Footer() {
 		<div className={classes.footer}>
 			<Container className={classes.inner}>
 				<Text c="dimmed" fz="sm">
-					Build by{' '}
+					{' '}
 					<Anchor href="https://github.com/jotyy" size="sm">
-						jotyy
+					Daiwa Capital Markets America
 					</Anchor>
-					. Hosted on{' '}
-					<Anchor href="https://vercel.com" size="sm">
+					{/* . Hosted on{' '} */}
+					{/* <Anchor href="https://vercel.com" size="sm">
 						Vercel
-					</Anchor>
+					</Anchor> */}
 					.
 				</Text>
 				<Group gap={0} className={classes.links} justify="flex-end" wrap="nowrap">

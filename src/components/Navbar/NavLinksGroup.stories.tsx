@@ -3,7 +3,7 @@ import { IconCalendarStats } from '@tabler/icons-react';
 import { NavLinksGroup } from './NavLinksGroup';
 
 const meta: Meta<typeof NavLinksGroup> = {
-	title: 'Components/NavLinksGroup',
+	title: 'Components/navigation/NavLinksGroup',
 	component: NavLinksGroup,
 	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/7.0/react/writing-docs/docs-page
 	tags: ['autodocs'],

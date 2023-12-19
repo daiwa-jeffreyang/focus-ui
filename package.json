@@ -8,11 +8,6 @@
 			"npm run lint:fix"
 		]
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
 	"scripts": {
 		"dev": "next dev",
 		"start": "next start",
@@ -33,7 +28,6 @@
 		"push-release": "git push --follow-tags origin main",
 		"pull": "git rebase origin main -i",
 		"pre-commit": "npm run lint",
-		"prepare": "husky install",
 		"storybook": "storybook dev -p 6006",
 		"build-storybook": "storybook build"
 	},

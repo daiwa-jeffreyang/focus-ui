@@ -2,9 +2,9 @@
 
 import { MantineProvider, Paper, Space, Title } from '@mantine/core';
 import { MantineReactTable, type MRT_ColumnDef, useMantineReactTable } from 'mantine-react-table';
+import Link from 'next/link'
 // import {  use, useMemo ,useState  } from 'react';
 import { use, useEffect, useMemo, useState } from 'react';
-
 
 type Person = {
 	name: string;
@@ -49,6 +49,9 @@ export const SimpleTable = () => {
 			{
 				accessorKey: 'name',
 				header: 'Name',
+				Cell: ({ cell }) => (
+					<Link href="https://www.sec.gov/ix?doc=/Archives/edgar/data/320193/000032019323000106/aapl-20230930.htm" target="_blank" >${cell.getValue<string>()}</Link>
+				),
 				//mantineTableHeadCellProps: { sx: { color: 'green' } },
 			},
 			{
@@ -114,7 +117,7 @@ export const SimpleTable = () => {
 
 	return (
 		<Paper withBorder radius="md" p="md">
-			<Title order={5}>Simple</Title>
+			<Title order={5}>Commission Reports</Title>
 			<Space h="md" />
 
 			{/* <MantineReactTable table={table} /> */}

@@ -3,7 +3,7 @@ import { NavLinks } from '@/config';
 import { Navbar } from './Navbar';
 
 const meta: Meta<typeof Navbar> = {
-	title: 'Components/Navbar',
+	title: 'Components/navigation/Navbar',
 	component: Navbar,
 	// This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/7.0/react/writing-docs/docs-page
 	tags: ['autodocs'],

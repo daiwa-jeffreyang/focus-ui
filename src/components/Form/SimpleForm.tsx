@@ -3,8 +3,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Box, Button, Paper, Space, Text, TextInput } from '@mantine/core';
 import { modals } from '@mantine/modals';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
+// import classes from './HeroSection.module.css';
 
 const schema = z.object({
 	name: z.string().min(1, { message: 'Username is required' }),
@@ -14,6 +16,8 @@ const schema = z.object({
 type User = z.infer<typeof schema>;
 
 export const SimpleForm = () => {
+	const router = useRouter();
+
 	const {
 		register,
 		handleSubmit,
@@ -33,9 +37,9 @@ export const SimpleForm = () => {
 	return (
 		<Paper withBorder shadow="md" p="md" w="400px">
 			<Box<'form'>>
-				<Text<'h2'> component="h2" fw="bold" fz="lg">
-					Register
-				</Text>
+				{/* <Text<'h2'> component="h2" fw="bold" fz="lg">
+					Login
+				</Text> */}
 				<TextInput
 					label="Username"
 					error={errors.name && errors.name.message}
@@ -43,15 +47,25 @@ export const SimpleForm = () => {
 				/>
 				<Space h="sm" />
 				<TextInput
-					label="Email"
+					label="Password"
 					error={errors.email && errors.email.message}
 					{...register('email')}
 				/>
-				<Text component="p" color="gray" size="sm">
+				{/* <Text component="p" color="gray" size="sm">
 					We will send you a confirmation email
-				</Text>
+				</Text> */}
 				<Space h="md" />
-				<Button onClick={handleSubmit(onSubmit)}>Register</Button>
+				{/* <Button onClick={handleSubmit(onSubmit)}>Register</Button> */}
+				<Button
+						size="lg"
+						// className={classes.control}
+						onClick={() => {
+							router.push('/dashboard');
+						}}
+						// rightSection={<IconArrowRight />}
+					>
+						LOGIN
+					</Button>
 			</Box>
 		</Paper>
 	);

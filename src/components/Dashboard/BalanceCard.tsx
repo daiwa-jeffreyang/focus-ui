@@ -8,12 +8,12 @@ const BalanceLeftStack = () => (
 	<Stack gap="md" style={{ flex: 1 }}>
 		<Stack gap={4}>
 			<Text size="xs" c="gray.6">
-				Availabel Balance
+				Audit Closed
 			</Text>
 			<Space h={2} />
-			<Title order={3}>$ 9572.23</Title>
+			<Title order={3}>80</Title>
 			<Text size="sm" c="gray.5">
-				+ 0.0012.23(0.2%)
+				Total  166
 				<span>
 					<IconArrowUp size={12} color="green" />
 				</span>
@@ -23,15 +23,15 @@ const BalanceLeftStack = () => (
 		<Group>
 			<Stack gap={2}>
 				<Text size="sm" c="gray.6">
-					Income
+					Transaction
 				</Text>
-				<Title order={5}>$ 5729.28</Title>
+				<Title order={5}>82%</Title>
 			</Stack>
 			<Stack gap={2}>
 				<Text size="sm" c="gray.6">
-					Expense
+					Valuation
 				</Text>
-				<Title order={5}>$ 1329.89</Title>
+				<Title order={5}>73%</Title>
 			</Stack>
 		</Group>
 		<Button size="sm" w={rem(140)} rightSection={<IconArrowRight size={14} />}>
@@ -44,35 +44,35 @@ const BalanceRightStack = () => (
 	<Stack style={{ flex: 1 }}>
 		<Stack align="start" gap={2}>
 			<Text size="sm" c="gray.6">
-				Etherum
+				JPY
 			</Text>
 			<Title order={5}>
-				1.5236 ETH ={' '}
-				<Text component="span" size="md" fw="bold" c="gray.6">
+			¥ 1,123,647,341
+				{/* <Text component="span" size="md" fw="bold" c="gray.6">
 					$1123.64
-				</Text>
+				</Text> */}
 			</Title>
 		</Stack>
 		<Stack align="start" gap={2}>
 			<Text size="sm" c="gray.6">
-				Bitcoin
+				USD
 			</Text>
 			<Title order={5}>
-				0.0236 BTC ={' '}
-				<Text component="span" size="md" fw="bold" c="gray.6">
+				$ 21,035,345
+				{/* <Text component="span" size="md" fw="bold" c="gray.6">
 					$923.64
-				</Text>
+				</Text> */}
 			</Title>
 		</Stack>
 		<Stack align="start" gap={2}>
 			<Text size="sm" c="gray.6">
-				Doge
+				EUR
 			</Text>
 			<Title order={5}>
-				2210 DOGE ={' '}
-				<Text component="span" size="md" fw="bold" c="gray.6">
+			€ 2,453,453
+				{/* <Text component="span" size="md" fw="bold" c="gray.6">
 					$112.64
-				</Text>
+				</Text> */}
 			</Title>
 		</Stack>
 	</Stack>
@@ -82,7 +82,7 @@ export function BalanceCard() {
 	return (
 		<Card radius="md">
 			<Card.Section className={classes.section}>
-				<Title order={5}>Wallet Balance</Title>
+				<Title order={5}>Fund Accounting</Title>
 				<Select
 					value="march"
 					size="xs"
